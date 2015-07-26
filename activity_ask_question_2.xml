@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding = "10dp"
+    android:layout_height="match_parent">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:text = "Question 2:"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text = ""
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:text = "If you woke up one day and found that you tunred into a dog, what would you do?"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id = "@+id/bOptionA"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:text = "A. Chase my tail!"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id = "@+id/bOptionB"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:text = "B. Find out what in the world happened."
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id = "@+id/bOptionC"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:text = "C. Live it out, poop everywhere, chase squirrels."
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id = "@+id/bOptionD"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:text = "D. Chase the mailman! All mailmen are evil!"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvLogOut"
+        android:layout_width="wrap_content"
+        android:text = "Return to Home (Saves Progress)"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
