@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class Register extends ActionBarActivity implements View.OnClickListener{
 
     Button bRegister;
-    EditText etFirstName, etLastName, etEmail, etUsername, etPassword;
+    EditText etFirstName, etLastName, etEmail, etUsername, etPassword, etConfirmPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class Register extends ActionBarActivity implements View.OnClickListener{
         etEmail = (EditText) findViewById(R.id.etEmail);
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
+        etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
         bRegister = (Button) findViewById(R.id.bRegister);
 
         bRegister.setOnClickListener(this);
