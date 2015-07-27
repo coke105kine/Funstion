@@ -1,6 +1,6 @@
 Jiajie Li
 Anthony Chang
-Jason Romano
+Jason Ramano
 
 Assignment 3 README
 
