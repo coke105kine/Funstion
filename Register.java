@@ -1,5 +1,7 @@
 package com.example.user.funstion;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,11 +9,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends ActionBarActivity implements View.OnClickListener{
 
     Button bRegister;
     EditText etFirstName, etLastName, etEmail, etUsername, etPassword, etConfirmPassword;
+    Context context = this;
+    UserDbHelper userDbHelper;
+    SQLiteDatabase sqLiteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,20 @@ public class Register extends ActionBarActivity implements View.OnClickListener{
         bRegister = (Button) findViewById(R.id.bRegister);
 
         bRegister.setOnClickListener(this);
+    }
+
+    public void addUser(View view){
+        String firstName = etFirstName.getText().toString();
+        String lastName = etLastName.getText().toString();
+        String email = etEmail.getText().toString();
+        String username = etUsername.getText().toString();
+        String password = etPassword.getText().toString();
+        String passwordConfirm = etConfirmPassword.getText().toString();
+        userDbHelper = new UserDbHelper(context);
+        sqLiteDatabase = userDbHelper.getWritableDatabase();
+        userDbHelper.addInformation(firstName, lastName, email, username, password, passwordConfirm, sqLiteDatabase);
+        Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_LONG).show();
+            userDbHelper.close();
     }
 
     @Override
