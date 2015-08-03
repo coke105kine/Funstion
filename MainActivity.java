@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button bLogin;
     EditText etUsername, etPassword;
