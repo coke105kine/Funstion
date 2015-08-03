@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeScreen extends AppCompatActivity implements View.OnClickListener{
 
     Button bContinue, bNewGame, bLogout, bSeeDatabase;
     EditText etFirstName, etLastName, etUsername, etPassword, etPasswordConfirm, etEmail;
