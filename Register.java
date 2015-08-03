@@ -58,7 +58,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.bRegister:
+            case R.id.bRegister:// Send new user info to database
+                startActivity(new Intent(this, DataListActivity.class));
+                break;
                 break;
         }
     }
