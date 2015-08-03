@@ -1,6 +1,7 @@
 package com.example.user.funstion;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -47,6 +48,11 @@ public class Register extends ActionBarActivity implements View.OnClickListener{
         userDbHelper.addInformation(firstName, lastName, email, username, password, passwordConfirm, sqLiteDatabase);
         Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_LONG).show();
             userDbHelper.close();
+    }
+
+    public void viewContact(View view){
+        Intent intent = new Intent(this, DataListActivity.class);
+        startActivity(intent);
     }
 
     @Override
