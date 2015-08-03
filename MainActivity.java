@@ -16,6 +16,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     Button bLogin;
     EditText etUsername, etPassword;
     TextView tvRegisterLink;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         bLogin.setOnClickListener(this);
         tvRegisterLink.setOnClickListener(this);
+
+        userLocalStore = new UserLocalStore(this);
     }
 
     @Override //when login button is clicked, this method will be notified
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.bLogin: //when login button is clicked
+                User user = new User(null, null, null, null, null, null);
+                userLocalStore.storeUserData(user);
+                userLocalStore.setUserLoggedIn(true);
                 break;
             case R.id.tvRegisterLink: //when register link is clicked
                 startActivity(new Intent(this, Register.class));
