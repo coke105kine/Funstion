@@ -34,6 +34,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.bLogout: //if user selects log out
                 startActivity(new Intent(this, Login.class)); //go to log in screen
                 break;
+            case R.id.bNewGame: // If new game is clicked, go to first question.
+                startActivity(new Intent(this, AskQuestion1.class));
+                break;
         }
     }
 }
