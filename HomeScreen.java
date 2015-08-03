@@ -32,10 +32,12 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         bContinue = (Button) findViewById(R.id.bContinue);
         bNewGame = (Button) findViewById(R.id.bNewGame);
         bLogout = (Button) findViewById(R.id.bLogout);
+        bSeeDatabase = (Button) findViewById(R.id.bSeeDatabase);
 
         bContinue.setOnClickListener(this);
         bNewGame.setOnClickListener(this);
         bLogout.setOnClickListener(this);
+        bSeeDatabase.setOnClickListener(this);
 
         userLocalStore = new UserLocalStore(this);
     }
