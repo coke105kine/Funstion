@@ -1,7 +1,7 @@
 package com.example.user.funstion;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivityy;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
