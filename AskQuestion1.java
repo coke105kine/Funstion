@@ -1,7 +1,7 @@
 package com.example.user.funstion;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +20,7 @@ import android.widget.TextView;
  * @since 07-26-2015
  *
  */
-public class AskQuestion1 extends ActionBarActivity implements View.OnClickListener{
+public class AskQuestion1 extends AppCompatActivity implements View.OnClickListener{
 
     // Initiate variables
     Button bOptionA; // Buttons A through D
