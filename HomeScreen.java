@@ -9,15 +9,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button bContinue, bNewGame, bLogout;
+    Button bContinue, bNewGame, bLogout, bSeeDatabase;
+    EditText etFirstName, etLastName, etUsername, etPassword, etPasswordConfirm, etEmail;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        etFirstName = (EditText) findViewById(R.id.etFirstName);
+        etLastName = (EditText) findViewById(R.id.etLastName);
+        etUsername = (EditText) findViewById(R.id.etUsername);
+        etPassword = (EditText) findViewById(R.id.etPassword);
+        etPasswordConfirm = (EditText) findViewById(R.id.etConfirmPassword);
+        etEmail = (EditText) findViewById(R.id.etEmail);
 
         bContinue = (Button) findViewById(R.id.bContinue);
         bNewGame = (Button) findViewById(R.id.bNewGame);
@@ -26,12 +36,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bContinue.setOnClickListener(this);
         bNewGame.setOnClickListener(this);
         bLogout.setOnClickListener(this);
+
+        userLocalStore = new UserLocalStore(this);
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        if (authenticate() == true){
+            displayUserDetails();
+        }
+    }
+
+    private boolean authenticate(){
+        return userLocalStore.getUserLoggedIn();
+    }
+
+    private void displayUserDetails(){
+        User user = userLocalStore.getLoggedInUser();
+
+        etFirstName.setText(user.firstName);
+        etLastName.setText(user.lastName);
+        etUsername.setText(user.username);
+        etPassword.setText(user.password);
+        etPasswordConfirm.setText(user.passwordConfirm);
+        etEmail.setText(user.email);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.bLogout: //if user selects log out
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
                 startActivity(new Intent(this, Login.class)); //go to log in screen
                 break;
             case R.id.bNewGame: // If new game is clicked, go to first question.
