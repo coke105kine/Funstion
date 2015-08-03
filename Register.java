@@ -3,7 +3,7 @@ package com.example.user.funstion;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivityy;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Register extends ActionBarActivity implements View.OnClickListener{
+public class Register extends AppCompatActivity implements View.OnClickListener{
 
     Button bRegister;
     EditText etFirstName, etLastName, etEmail, etUsername, etPassword, etConfirmPassword;
