@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
         etUsername = (EditText) findViewById(R.id.etUsername); //looks for field with id etUsername and assigns it to etUsername
         etPassword = (EditText) findViewById(R.id.etPassword); //looks for field with id etPassword and assigns it to etPassword
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 User user = new User(null, null, null, null, null, null);
                 userLocalStore.storeUserData(user);
                 userLocalStore.setUserLoggedIn(true);
+                startActivity(new Intent(this, HomeScreen.class)); // Temporary work-around to get to main screen for testing purposes.
                 break;
             case R.id.tvRegisterLink: //when register link is clicked
                 startActivity(new Intent(this, Register.class));
