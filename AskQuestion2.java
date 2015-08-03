@@ -43,7 +43,7 @@ public class AskQuestion2 extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ask_question2);
+        setContentView(R.layout.activity_ask_question_2);
 
         bOptionA = (Button) findViewById(R.id.bOptionA);
         bOptionB = (Button) findViewById(R.id.bOptionB);
