@@ -37,6 +37,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.bNewGame: // If new game is clicked, go to first question.
                 startActivity(new Intent(this, AskQuestion1.class));
                 break;
+            case R.id.bSeeDatabase: // If user wants to see who's registered on their device for the app.
+                startActivity(new Intent(this, DataListActivity.class));
+                break;
         }
     }
 }
