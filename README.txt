@@ -4,7 +4,7 @@ Jason Ramano
 
 Version 2
 
-During this part of our app development, we were able to get the database fairly completed. The register screen successfully stores the user data and the login screen takes in user login. If the passwords dont match upon registering, an error box will pup up. This is also implemented for user log in. For the code, we all took different parts of the database and implemented them. For the report, Jason did part 1, Anthony did part 2, and Jiajie part 3. 
+During this part of our app development, we were able to get the database fairly completed. The register screen successfully stores the user data and the login screen takes in user login. If the passwords dont match upon registering, an error box will pup up. This is also implemented for user log in. The database isn't fully functional but we're satisfied with what we have so far. For the code, we all took different parts of the database and implemented them. For the report, Jason did part 1, Anthony did part 2, and Jiajie part 3. 
 
 Version 1 
 
