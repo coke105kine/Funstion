@@ -41,7 +41,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
         userLocalStore = new UserLocalStore(this);
     }
-
+    //on startup
     @Override
     protected void onStart(){
         super.onStart();
@@ -50,11 +50,11 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             displayUserDetails();
         }
     }
-
+    //confirms login
     private boolean authenticate(){
         return userLocalStore.getUserLoggedIn();
     }
-
+    //displasy user info
     private void displayUserDetails(){
         User user = userLocalStore.getLoggedInUser();
 
@@ -65,7 +65,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         etPasswordConfirm.setText(user.passwordConfirm);
         etEmail.setText(user.email);
     }
-
+    //logout and new game function
     @Override
     public void onClick(View v) {
         switch(v.getId()){
