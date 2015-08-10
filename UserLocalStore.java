@@ -14,7 +14,7 @@ public class UserLocalStore {
     public UserLocalStore(Context context){
         userLocalDatabase = context.getSharedPreferences(SP_NAME, 0);
     }
-
+    //adds to database
     public void storeUserData(User user){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putString("firstName", user.firstName);
@@ -25,7 +25,7 @@ public class UserLocalStore {
         spEditor.putString("email", user.email);
         spEditor.commit();
     }
-
+    //get user info
     public User getLoggedInUser(){
         String firstName = userLocalDatabase.getString("firstName", "");
         String lastName = userLocalDatabase.getString("lastName", "");
@@ -36,13 +36,13 @@ public class UserLocalStore {
         User storedUser = new User(firstName, lastName, username, password, passwordConfirm, email);
         return storedUser;
     }
-
+    //set user login to true when logged in
     public void setUserLoggedIn(boolean loggedIn){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putBoolean("LoggedIn", loggedIn);
         spEditor.commit();
     }
-
+    //Checks if user is logged in
     public boolean getUserLoggedIn(){
         if (userLocalDatabase.getBoolean("loggedIn", false) == true){
             return true;
@@ -51,7 +51,7 @@ public class UserLocalStore {
             return false;
         }
     }
-
+    //clears data upon logout
     public void clearUserData(){
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.clear();
