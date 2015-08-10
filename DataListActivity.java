@@ -8,14 +8,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-
+/**
+* Class that iterates through the database to show the currently logged in user who else is registered locally.
+*
+* @Author Jiajie Li
+* @Co-Author Anthony Chang
+*
+*/ 
 public class DataListActivity extends AppCompatActivity {
-    ListView listView;
-    SQLiteDatabase sqLiteDatabase;
-    UserDbHelper userDbHelper;
-    Cursor cursor;
-    ListDataAdapter listDataAdapter;
+    
+    // Initiate variables
+    ListView listView; // Instance of a class to display database data in a list format
+    SQLiteDatabase sqLiteDatabase; // Instance of the SQLite database in use 
+    UserDbHelper userDbHelper; // Instance of a helper class for the database
+    Cursor cursor; // Instance of the cursor that will iterate through the database
+    ListDataAdapter listDataAdapter; // Instance of the class that is also responsible for listing data
 
+    /**
+     * Method that dictates what to do when an instance of this class is created.
+     * 
+     * @param savedInstanceState The current state of the application?
+     * @return None
+     * 
+     */
+     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
