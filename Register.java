@@ -19,7 +19,8 @@ public class Register extends ActionBarActivity implements View.OnClickListener{
     Context context = this;
     UserDbHelper userDbHelper;
     SQLiteDatabase sqLiteDatabase;
-
+    
+    //creates database
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class Register extends ActionBarActivity implements View.OnClickListener{
         bRegister = (Button) findViewById(R.id.bRegister);
         bRegister.setOnClickListener(this);
     }
-
+    //adds user to database
     public void addUser(View view){
         String firstName = etFirstName.getText().toString();
         String lastName = etLastName.getText().toString();
@@ -48,12 +49,12 @@ public class Register extends ActionBarActivity implements View.OnClickListener{
         Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_LONG).show();
             userDbHelper.close();
     }
-
+    //views user data
     public void viewContact(View view){
         Intent intent = new Intent(this, DataListActivity.class);
         startActivity(intent);
     }
-
+    //register button function
     @Override
     public void onClick(View v) {
         switch(v.getId()){
