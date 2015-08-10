@@ -4,7 +4,7 @@ Jason Ramano
 
 Version 3
 
-During this part of our app development, we were able to complete the database for the app. The database successfully takes in user login, register data, and store user answers. Overall, we're pretty satisfied. For the code, Jiajie did the final parts of the database. Anthony and Jason tested to make sure the app runs correctly. For the report, Anthony did part 1, Jason did part 2, and Jiajie did part 3. 
+During this part of our app development, we tried but were unable to complete the database for the app. The final codes for the database were added. It did have some problems and we did have some hard time understanding it since we were inexpereienced with database. For the code, Jiajie did the final parts of the database. Anthony and Jason tested the app. For the report, Anthony did part 1, Jason did part 2, and Jiajie did part 3. 
 
 Version 2
 
